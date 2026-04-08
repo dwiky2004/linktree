@@ -1,0 +1,352 @@
+/* 
+    DESIGN SYSTEM: PREMIUM CLAYMORPHISM BENTO
+    - Background: Soft Pastel Gray/Blue for depth
+    - Shadows: Dual-layer (light top-left, dark bottom-right)
+    - Typography: Outfit (Geometrical Sans-Serif)
+*/
+
+:root {
+    --bg-color: #E0E5EC;
+    --surface-color: #E0E5EC;
+    --text-primary: #4A4A4A;
+    --text-secondary: #777777;
+    --white: #FFFFFF;
+
+    /* CLAYMORPHISM TOKEN: LIGHT SOURCE FROM TOP-LEFT */
+    --shadow-light: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+    --shadow-inner: inset 4px 4px 8px rgba(163, 177, 198, 0.6), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+    --shadow-hover: 12px 12px 20px rgba(163, 177, 198, 0.8), -12px -12px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-primary);
+    overflow-x: hidden;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Profile Section Styling */
+header.profile {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.avatar-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.avatar-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background: var(--surface-color);
+    box-shadow: var(--shadow-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 36px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+#profile-bio {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 350;
+}
+
+/* BENTO GRID SYSTEM */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    margin-bottom: 40px;
+}
+
+/* Grid Item Base Styling */
+.grid-item {
+    background: var(--surface-color);
+    border-radius: 32px;
+    box-shadow: var(--shadow-light);
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Entry Animation Initial State */
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.grid-item:hover {
+    box-shadow: var(--shadow-hover);
+    transform: scale(1.02);
+}
+
+/* Featured / Full-Width Items */
+.grid-item.featured,
+.grid-item.whatsapp,
+.grid-item.testimonial-wide {
+    grid-column: span 2;
+}
+
+.featured {
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    min-height: 180px;
+}
+
+.featured .item-content {
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured .item-image {
+    width: 45%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Medium Items with Images */
+.snacks,
+.fruit-hampers,
+.single-box {
+    aspect-ratio: 1;
+    padding: 0;
+}
+
+.grid-item .item-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+.grid-item .item-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .item-image {
+    opacity: 0.8;
+}
+
+/* Category Specifics */
+.snacks { background: linear-gradient(135deg, #e3eeff 0%, #f3f3f3 100%); justify-content: flex-end; }
+.snacks .item-image { background-position: top center; opacity: 0.65; } /* Better fit for tall bags */
+
+.fruit-hampers {
+    background: linear-gradient(135deg, #fef9e7 0%, #fef3c7 100%);
+}
+
+.single-box {
+    background: linear-gradient(135deg, #f0f0f0 0%, #d1d5db 100%);
+}
+
+/* Social Links Small Squares */
+.instagram,
+.tiktok,
+.shopee {
+    aspect-ratio: 1;
+    align-items: center;
+    text-align: center;
+}
+
+.instagram {
+    background: linear-gradient(135deg, #FFF5F5 0%, #FED7D7 100%);
+}
+
+.shopee {
+    background: linear-gradient(135deg, #FFF5E6 0%, #FFEDD5 100%);
+}
+
+.tiktok {
+    background: #F3F4F6;
+}
+
+/* UI Elements */
+.badge {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    width: fit-content;
+    backdrop-filter: blur(4px);
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #4A4A4A;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-inner);
+    margin: 0 auto 10px;
+}
+
+.whatsapp .icon-circle {
+    margin: 0;
+}
+
+.whatsapp {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #E2F9D3 0%, #F1F8EE 100%);
+}
+
+.testimonial-wide {
+    background: #FFF5F5;
+    text-align: center;
+}
+
+.stars {
+    color: #FBBF24;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+
+    .grid-item.featured,
+    .grid-item.whatsapp,
+    .grid-item.testimonial-wide {
+        grid-column: span 4;
+    }
+
+    .featured {
+        aspect-ratio: 2.5/1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .grid-item.featured {
+        grid-column: span 3;
+        grid-row: span 2;
+        flex-direction: column;
+        aspect-ratio: auto;
+    }
+
+    .featured .item-image {
+        width: 100%;
+        height: 50%;
+    }
+
+    .grid-item.whatsapp,
+    .grid-item.testimonial-wide {
+        grid-column: span 3;
+    }
+}
+
+/* Extra Small Screens (< 360px) */
+@media (max-width: 360px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .grid-item {
+        padding: 15px;
+        border-radius: 24px;
+    }
+
+    .featured {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .featured .item-image {
+        width: 100%;
+        height: 120px;
+    }
+
+    .grid-item.featured,
+    .grid-item.whatsapp,
+    .grid-item.testimonial-wide {
+        grid-column: span 2;
+    }
+}
+
+footer.main-footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}

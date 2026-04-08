@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!-- SEO & Social Media Metadata (Penting saat Link dibagikan di WA/IG) -->
+    <title>Gifts & Bites | Premium Hampers & Artisan Snacks</title>
+    <meta name="description"
+        content="Koleksi Hampers Eksklusif, Buah Segar, dan Snack Premium dari Tangan Artisan. Temukan kado spesial untuk momen berharga Anda di sini.">
+    <meta name="author" content="Dev-Gifts & Bites">
+
+    <!-- Open Graph / Social Sharing (Optimasi untuk WhatsApp/Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Gifts & Bites | Hampers Premium & Snack Nagih">
+    <meta property="og:description"
+        content="Katalog Hampers Estetik & Snack Premium. Pesan sekarang untuk momen spesial Anda!">
+    <meta property="og:image" content="./assets/hampers_snack_main.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <!-- 
+            PANDUAN PERSONALISASI:
+            - Foto Profil: Timpa file './assets/profile.png' dengan foto Anda.
+            - Nama Profil: Ubah teks di dalam <h1>
+            - Bio Profil: Ubah teks di dalam <p id="profile-bio">
+        -->
+        <header class="profile">
+            <div class="avatar-container">
+                <div class="avatar-inner">
+                    <img src="./assets/profile.png" alt="Dev-Gifts & Bites Profile" id="profile-img">
+                </div>
+            </div>
+            <h1 id="profile-name">Dev-Gifts & Bites</h1>
+            <p id="profile-bio">Ada yang bisa kami bantu?<br>Hampers Estetik & Snack Nagih.</p>
+        </header>
+
+        <!-- Bento Grid Layout -->
+        <section class="grid-container">
+            <!-- 1. Katalog Utama (Featured) -->
+            <a href="https://wa.me/6281234567890?text=Halo%20Dev-Gifts%20%26%20Bites%2C%20saya%20ingin%20melihat%20katalog%20lengkap%20hampersnya%20ya."
+                class="grid-item featured" id="link-catalog">
+                <div class="item-content">
+                    <span class="badge">Best Seller</span>
+                    <h2>Katalog Hampers <br>Hari Raya</h2>
+                    <p>Koleksi Lengkap Parsel Premium & Snack Box.</p>
+                    <div class="cta-btn">Lihat Katalog</div>
+                </div>
+                <div class="item-image" style="background-image: url('./assets/hampers_snack_main.jpg');"></div>
+            </a>
+
+            <!-- 2. Artisan Snacks -->
+            <a href="https://wa.me/6281234567890?text=Halo%20Dev-Gifts%20%26%20Bites%2C%20saya%20mau%20order%20Stik%20%26%20Pangsit%20Premiumnya%20dong."
+                class="grid-item snacks" id="link-snacks">
+                <div class="item-content">
+                    <h2>Stik & Pangsit<br>Premium</h2>
+                    <p>Gurih,dan Higienis.</p>
+                    <div class="cta-btn">Order Snack</div>
+                </div>
+                <div class="item-image" style="background-image: url('./assets/snacks_real.jpg');"></div>
+            </a>
+
+            <!-- 3. Buah & Bunga -->
+            <a href="https://wa.me/6281234567890?text=Halo%20Dev-Gifts%20%26%20Bites%2C%20saya%20ingin%20pesan%20Hampers%20Buah%20%26%20Bunga."
+                class="grid-item fruit-hampers" id="link-fruit">
+                <div class="item-content">
+                    <span class="badge">Edisi Idul Fitri</span>
+                    <h3>Hampers Buah <br>& Bunga</h3>
+                    <p>Segar & Estetik.</p>
+                </div>
+                <div class="item-image" style="background-image: url('./assets/hampers_fruit.jpg');"></div>
+            </a>
+
+            <!-- 4. Snack Box -->
+            <a href="https://wa.me/6281234567890?text=Halo%20Dev-Gifts%20%26%20Bites%2C%20saya%20ingin%20pesan%20Paket%20Hemat%20Snack%20Box."
+                class="grid-item single-box" id="link-single">
+                <div class="item-content">
+                    <h3>Paket Hemat <br>Snack Box</h3>
+                    <p>Pilihan Praktis.</p>
+                </div>
+                <div class="item-image" style="background-image: url('./assets/hampers_single.jpg');"></div>
+            </a>
+
+            <!-- 5. Instagram -->
+            <a href="https://instagram.com/#" class="grid-item instagram" target="_blank" rel="noopener">
+                <div class="item-content">
+                    <div class="icon-circle small">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>Feeds Estetik Kami.</p>
+                </div>
+            </a>
+
+            <!-- 6. TikTok -->
+            <a href="https://tiktok.com/#" class="grid-item tiktok" target="_blank" rel="noopener">
+                <div class="item-content">
+                    <div class="icon-circle small">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                        </svg>
+                    </div>
+                    <span>TikTok</span>
+                </div>
+            </a>
+
+            <!-- 7. Shopee -->
+            <a href="https://shopee.co.id/#" class="grid-item shopee" target="_blank" rel="noopener">
+                <div class="item-content">
+                    <div class="icon-circle small">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                            <path d="M3 6h18"></path>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                    <span>Shopee</span>
+                </div>
+            </a>
+
+            <!-- 8. Testimonials -->
+            <a href="#" class="grid-item testimonial-wide">
+                <div class="item-content">
+                    <div class="stars">★★★★★</div>
+                    <h3>Lebih dari 500+ Pelanggan Puas</h3>
+                    <p>Kualitas Premium dengan Pelayanan Terpercaya.</p>
+                </div>
+            </a>
+
+            <!-- 9. WhatsApp (Direct CTA) -->
+            <a href="https://wa.me/6281234567890?text=Halo%20Dev-Gifts%20%26%20Bites%2C%20saya%20ingin%20bertanya%20tentang%20produk%20Anda."
+                class="grid-item whatsapp">
+                <div class="item-content">
+                    <h3>Mari Berdiskusi</h3>
+                    <p>Punya Request Khusus? Sapa Kami!</p>
+                </div>
+                <div class="icon-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                </div>
+            </a>
+        </section>
+
+        <footer class="main-footer">
+            <p>&copy; 2026 Dev-Gifts & Bites. Crafted with ❤️ kyxen project.</p>
+        </footer>
+    </main>
+
+    <!-- UI/UX Micro-animations Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.grid-item');
+            items.forEach((item, index) => {
+                // Staggered Fade-in Animation for Bento Items
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 100 + (index * 80));
+            });
+        });
+    </script>
+</body>
+
+</html>
