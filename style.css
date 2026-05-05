@@ -12,9 +12,9 @@
     --white: #ffffff;
 
     /* Dark mode shadow */
-    --shadow-light: 5px 5px 15px rgba(0,0,0,0.6), -5px -5px 15px rgba(40,40,40,0.3);
-    --shadow-inner: inset 4px 4px 8px rgba(0,0,0,0.6), inset -4px -4px 8px rgba(40,40,40,0.3);
-    --shadow-hover: 8px 8px 20px rgba(0,0,0,0.8), -8px -8px 20px rgba(50,50,50,0.4);
+    --shadow-light: 5px 5px 15px rgba(0, 0, 0, 0.6), -5px -5px 15px rgba(40, 40, 40, 0.3);
+    --shadow-inner: inset 4px 4px 8px rgba(0, 0, 0, 0.6), inset -4px -4px 8px rgba(40, 40, 40, 0.3);
+    --shadow-hover: 8px 8px 20px rgba(0, 0, 0, 0.8), -8px -8px 20px rgba(50, 50, 50, 0.4);
 }
 
 /* Base Reset */
@@ -231,7 +231,7 @@ h1 {
     margin-bottom: 12px;
     width: fit-content;
     backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .cta-btn {
