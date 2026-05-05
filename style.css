@@ -1,21 +1,20 @@
 /* 
-    DESIGN SYSTEM: PREMIUM CLAYMORPHISM BENTO
-    - Background: Soft Pastel Gray/Blue for depth
-    - Shadows: Dual-layer (light top-left, dark bottom-right)
+    DESIGN SYSTEM: PREMIUM DARK BENTO (STREETWEAR EDITION)
+    - Background: Deep Black / Dark Grey
     - Typography: Outfit (Geometrical Sans-Serif)
 */
 
 :root {
-    --bg-color: #E0E5EC;
-    --surface-color: #E0E5EC;
-    --text-primary: #4A4A4A;
-    --text-secondary: #777777;
-    --white: #FFFFFF;
+    --bg-color: #0d0d0d;
+    --surface-color: #1a1a1a;
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a0;
+    --white: #ffffff;
 
-    /* CLAYMORPHISM TOKEN: LIGHT SOURCE FROM TOP-LEFT */
-    --shadow-light: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-    --shadow-inner: inset 4px 4px 8px rgba(163, 177, 198, 0.6), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
-    --shadow-hover: 12px 12px 20px rgba(163, 177, 198, 0.8), -12px -12px 20px rgba(255, 255, 255, 0.6);
+    /* Dark mode shadow */
+    --shadow-light: 5px 5px 15px rgba(0,0,0,0.6), -5px -5px 15px rgba(40,40,40,0.3);
+    --shadow-inner: inset 4px 4px 8px rgba(0,0,0,0.6), inset -4px -4px 8px rgba(40,40,40,0.3);
+    --shadow-hover: 8px 8px 20px rgba(0,0,0,0.8), -8px -8px 20px rgba(50,50,50,0.4);
 }
 
 /* Base Reset */
@@ -62,7 +61,7 @@ header.profile {
     justify-content: center;
     align-items: center;
     padding: 6px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 #profile-img {
@@ -70,19 +69,21 @@ header.profile {
     height: 100%;
     object-fit: cover;
     border-radius: 36px;
+    background-color: #000;
 }
 
 h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 8px;
     letter-spacing: -0.5px;
+    text-transform: uppercase;
 }
 
 #profile-bio {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    font-weight: 350;
+    font-weight: 400;
 }
 
 /* BENTO GRID SYSTEM */
@@ -107,7 +108,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     /* Entry Animation Initial State */
     opacity: 0;
     transform: translateY(20px);
@@ -116,6 +117,7 @@ h1 {
 .grid-item:hover {
     box-shadow: var(--shadow-hover);
     transform: scale(1.02);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Featured / Full-Width Items */
@@ -126,7 +128,7 @@ h1 {
 }
 
 .featured {
-    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    background: linear-gradient(135deg, #2a2a2a 0%, #111111 100%);
     display: flex;
     flex-direction: row;
     padding: 0;
@@ -171,24 +173,30 @@ h1 {
     height: 100%;
     background-size: cover;
     background-position: center;
-    opacity: 0.4;
+    opacity: 0.3;
     transition: opacity 0.3s ease;
 }
 
 .grid-item:hover .item-image {
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 /* Category Specifics */
-.snacks { background: linear-gradient(135deg, #e3eeff 0%, #f3f3f3 100%); justify-content: flex-end; }
-.snacks .item-image { background-position: top center; opacity: 0.65; } /* Better fit for tall bags */
+.snacks {
+    background: linear-gradient(135deg, #1f1f1f 0%, #0a0a0a 100%);
+    justify-content: flex-end;
+}
+
+.snacks .item-image {
+    background-position: top center;
+}
 
 .fruit-hampers {
-    background: linear-gradient(135deg, #fef9e7 0%, #fef3c7 100%);
+    background: linear-gradient(135deg, #252525 0%, #0f0f0f 100%);
 }
 
 .single-box {
-    background: linear-gradient(135deg, #f0f0f0 0%, #d1d5db 100%);
+    background: linear-gradient(135deg, #202020 0%, #050505 100%);
 }
 
 /* Social Links Small Squares */
@@ -198,23 +206,24 @@ h1 {
     aspect-ratio: 1;
     align-items: center;
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .instagram {
-    background: linear-gradient(135deg, #FFF5F5 0%, #FED7D7 100%);
+    background: linear-gradient(135deg, #241a22 0%, #170d11 100%);
 }
 
 .shopee {
-    background: linear-gradient(135deg, #FFF5E6 0%, #FFEDD5 100%);
+    background: linear-gradient(135deg, #2e2015 0%, #170d05 100%);
 }
 
 .tiktok {
-    background: #F3F4F6;
+    background: #1a1a1a;
 }
 
 /* UI Elements */
 .badge {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.7);
     padding: 4px 10px;
     border-radius: 100px;
     font-size: 0.65rem;
@@ -222,45 +231,57 @@ h1 {
     margin-bottom: 12px;
     width: fit-content;
     backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .cta-btn {
     display: inline-block;
-    background: #4A4A4A;
-    color: white;
+    background: #f0f0f0;
+    color: #111;
     padding: 10px 20px;
     border-radius: 100px;
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-top: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+    background: #ffffff;
 }
 
 .icon-circle {
     width: 44px;
     height: 44px;
-    background: white;
+    background: #f0f0f0;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: var(--shadow-inner);
     margin: 0 auto 10px;
+    color: #111;
 }
 
 .whatsapp .icon-circle {
     margin: 0;
+    background: #25D366;
+    color: white;
 }
 
 .whatsapp {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, #E2F9D3 0%, #F1F8EE 100%);
+    background: linear-gradient(135deg, #1c2b1f 0%, #0d1a10 100%);
+    border: 1px solid rgba(37, 211, 102, 0.3);
 }
 
 .testimonial-wide {
-    background: #FFF5F5;
+    background: #151515;
     text-align: center;
 }
 
@@ -349,4 +370,119 @@ footer.main-footer {
     padding: 20px 0;
     font-size: 0.75rem;
     color: var(--text-secondary);
+}
+
+/* HIGH CONVERSION STYLES UPDATE */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.trust-badges span {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.highlight-text {
+    color: #e0e0e0;
+    font-weight: 700;
+}
+
+.price-tag {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.primary-cta {
+    background: #ffffff;
+    color: #000000;
+    font-size: 0.85rem;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.primary-cta:hover {
+    background: #e0e0e0 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(255, 255, 255, 0.15);
+}
+
+.banner-urgency {
+    background: linear-gradient(90deg, #2a0808 0%, #1a0505 100%);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.95rem;
+    color: #ff4d4d;
+    border: 2px dashed #801a1a;
+    box-shadow: var(--shadow-light);
+    grid-column: span 2;
+}
+
+@media (min-width: 768px) {
+    .banner-urgency {
+        grid-column: span 4;
+    }
+}
+
+@media (min-width: 1024px) {
+    .banner-urgency {
+        grid-column: span 6;
+    }
+}
+
+.pulse-effect {
+    animation: pulse-soft 2s infinite;
+}
+
+@keyframes pulse-soft {
+    0% {
+        transform: scale(1);
+        box-shadow: var(--shadow-light);
+    }
+
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: var(--shadow-light);
+    }
+}
+
+.wa-icon {
+    background: #25D366;
+    color: white;
+}
+
+.pulse-badge {
+    background: #ff3333;
+    color: white;
+    border: none;
+    animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.7;
+    }
 }

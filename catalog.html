@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog | Step 2 Rhythm</title>
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Tailwind Configuration & Brutalist Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#050505',
+                            white: '#f5f5f5',
+                            gray: '#1a1a1a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Brutalist-lite specific utilities */
+        .brutal-border {
+            border: 1px solid var(--tw-colors-brand-white, #f5f5f5);
+        }
+
+        .brutal-hover {
+            transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .brutal-hover:hover {
+            background-color: var(--tw-colors-brand-white, #f5f5f5);
+            color: var(--tw-colors-brand-black, #050505);
+            /* Brutalist pop-out effect */
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0px 0px rgba(245, 245, 245, 0.8);
+        }
+
+        /* Ensures SVG icons inherit color properly on hover */
+        .group:hover svg {
+            color: var(--tw-colors-brand-black, #050505);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-black text-brand-white min-h-screen relative font-sans antialiased selection:bg-brand-white selection:text-black">
+
+    <!-- Fixed Background Image -->
+    <div class="fixed inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1596200234255-e7a9b0c2a7db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+            alt="Background" class="w-full h-full object-cover object-center opacity-70 grayscale">
+    </div>
+
+    <!-- Readability Overlay -->
+    <div class="fixed inset-0 z-10 bg-black/70 backdrop-blur-md"></div>
+
+    <!-- Main Content Container -->
+    <main class="relative z-20 flex flex-col items-center min-h-screen px-4 py-8 max-w-5xl mx-auto w-full">
+
+        <!-- Navigation -->
+        <nav class="w-full mb-8">
+            <a href="index.html"
+                class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-gray-300 transition-colors">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i> Back to Linktree
+            </a>
+        </nav>
+
+        <!-- Header -->
+        <header class="w-full mb-12 border-b border-white/20 pb-6">
+            <h1 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-2">Full Catalog</h1>
+            <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Season 1 Drops - Step 2 Rhythm</p>
+        </header>
+
+        <!-- Catalog Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mb-12">
+
+            <!-- Product 1 -->
+            <div class="flex flex-col bg-brand-black brutal-border group">
+                <div class="relative w-full aspect-square bg-brand-gray overflow-hidden border-b border-white">
+                    <img src="./assets/logo1.png" alt="S2R Signature Tee"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                        onerror="this.style.display='none'">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center text-gray-500 text-xs tracking-widest uppercase font-bold text-center p-4 border border-dashed border-gray-700 -z-10">
+                        Simpan gambar<br>'baju1.jpg'<br>di folder assets
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col gap-2">
+                    <h3 class="text-lg font-bold uppercase tracking-wider">S2R Signature Tee</h3>
+                    <p class="text-sm text-gray-400 font-mono">IDR 199.000</p>
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
+                        class="mt-4 w-full py-3 text-center bg-transparent brutal-border brutal-hover font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-cart" class="w-4 h-4"></i> Order Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="flex flex-col bg-brand-black brutal-border group">
+                <div class="relative w-full aspect-square bg-brand-gray overflow-hidden border-b border-white">
+                    <img src="./assets/logo2.png" alt="Brutalist Hoodie"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+                        onerror="this.style.display='none'">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center text-gray-500 text-xs tracking-widest uppercase font-bold text-center p-4 border border-dashed border-gray-700 -z-10">
+                        Simpan gambar<br>'baju2.jpg'<br>di folder assets
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col gap-2">
+                    <h3 class="text-lg font-bold uppercase tracking-wider">Brutalist Hoodie</h3>
+                    <p class="text-sm text-gray-400 font-mono">IDR 399.000</p>
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
+                        class="mt-4 w-full py-3 text-center bg-transparent brutal-border brutal-hover font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-cart" class="w-4 h-4"></i> Order Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="flex flex-col bg-brand-black brutal-border group">
+                <div class="relative w-full aspect-square bg-brand-gray overflow-hidden border-b border-white bg-white">
+                    <img src="./assets/logo3.png" alt="Rhythm Cap"
+                        class="w-full h-full object-contain p-4 transition duration-500 group-hover:scale-105"
+                        onerror="this.style.display='none'">
+                    <div
+                        class="absolute inset-0 flex items-center justify-center text-gray-500 text-xs tracking-widest uppercase font-bold text-center p-4 border border-dashed border-gray-700 -z-10">
+                        Simpan gambar<br>'baju3.jpg'<br>di folder assets
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col gap-2">
+                    <h3 class="text-lg font-bold uppercase tracking-wider">Rhythm Cap</h3>
+                    <p class="text-sm text-gray-400 font-mono">IDR 149.000</p>
+                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer"
+                        class="mt-4 w-full py-3 text-center bg-transparent brutal-border brutal-hover font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-cart" class="w-4 h-4"></i> Order Now
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-auto pt-8 border-t border-white/20 w-full text-center">
+            <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase">
+                &copy; 2026 Step 2 Rhythm. All Rights Reserved.
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
